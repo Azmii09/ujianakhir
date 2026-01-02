@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Produk</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      width: 200px;
+    }
+
+    .search-bar button {
+      padding: 5px 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .waktu {
+      margin-top: 10px;
+      margin-right: 20px;
+      text-align: right; 
+    }
+
+    .product-catalog {
+      margin-top: 20px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .product-item {
+      background: #100f0f;
+      border: 2px solid hsl(233, 100%, 50%);
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #6070ff;
+      color: #000000;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 10px; /* Memberi jarak lebih */
+      }
+      .pagination a {
+        display: inline-block;
+        padding: 12px 25px; /* Membuat tombol lebih besar */
+        background: linear-gradient(90deg, #4facfe, #00f2fe); /* Warna biru gradasi */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px; /* Membuat sudut lebih melengkung */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+      }
+      .pagination a:hover {
+        background: linear-gradient(90deg, #00f2fe, #4facfe); /* Efek hover gradasi */
+        transform: translateY(-2px); /* Efek hover */
+      }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Logo" style="height: 60px; vertical-align: middle;">
+      <span class="logo">SembakoKita</span>
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="active">Produk</a>
+      <a href="contact us.html">Pemesanan</a>
+      <a href="about us.html">Tentang Kami</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Cari</button>
+    </div>
+    <div class="waktu">
+      Time: <span id="jam"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-catalog">
+      <h2>Katalog Produk</h2>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/beras.jpg" alt="Beras">
+          <h3>Beras Premium</h3>
+          <p>Rp. 20.000/kg</p>
+        </div>
+        <div class="product-item">
+          <img src="images/gula.jpg" alt="Gula">
+          <h3>Gula</h3>
+          <p>Rp. 19.000/kg</p>
+        </div>
+        <div class="product-item">
+          <img src="images/minyak.jpg" alt="Minyak Goreng">
+          <h3>Minyak Goreng</h3>
+          <p>Rp. 19.000/L</p>
+        </div>
+        <div class="product-item">
+          <img src="images/telur.jpg" alt="Telur">
+          <h3>Telur</h3>
+          <p>Rp. 2.800/butir</p>
+        </div>
+        <div class="product-item">
+          <img src="images/aqua.jpg" alt="Aqua">
+          <h3>Aqua</h3>
+          <p>Rp. 21.000/galon</p>
+        </div>
+        <div class="product-item" onclick="showProductDetails('gas')">
+          <img src="images/gas.jpg" alt="Gas">
+          <h3>Gas</h3>
+          <p>Rp. 20.000/tabung</p>
+        </div>
+        <div class="product-item">
+          <img src="images/kecap.jpg" alt="Kecap">
+          <h3>Kecap</h3>
+          <p>Rp. 15.000/botol</p>
+        </div>
+        <div class="product-item">
+          <img src="images/saos.jpg" alt="Saos" width="220px">
+          <h3>Saos</h3>
+          <p>Rp. 10.000</p>
+        </div>
+        <!-- Add more products as needed -->
+      </div>
+    </section>
+    <div class="pagination">
+      <a href="index.html" class="prev-page">Halaman Sebelumnya</a>
+      <a href="contact us.html" class="next-page">Halaman Berikutnya</a>
+    </div>
+  </main>
+
+  <footer>
+      <p>&copy; 2026 Azmi Jauhari 251011700167 01SIFP003.</p>
+    </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Beranda</title>
+    <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      width: 200px;
+    }
+
+    .search-bar button {
+      padding: 5px 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .waktu {
+      margin-top: 10px;
+      margin-right: 20px;
+      text-align: right; 
+    }
+
+    .features {
+      text-align: center;
+      background-color: #f4f4f9;
+      padding: 30px 20px;
+      margin: 20px auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 1500px;
+    }
+
+    .features h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .features p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .feature-list div {
+      text-align: center;
+    }
+
+    .feature-list img {
+      width: 150px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .feature-list p {
+      color: #333;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #6070ff;
+      color: #000000;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 10px;
+      margin-left: 1100px;
+    }
+    .pagination a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .pagination a:hover {
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      transform: translateY(-2px);
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .welcome h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+    .welcome p {
+      font-size: 1.2em;
+      color: #555;
+      margin: 20px 0;
+    }
+    .cta-buttons {
+      margin-top: 20px;
+    }
+    .cta-buttons .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #4facfe;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .cta-buttons .btn:hover {
+      background-color: #00f2fe;
+    }
+    .testimonials {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+    .testimonials h2 {
+      font-size: 2em;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .testimonial-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .testimonial-item {
+      background-color: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(55, 79, 255, 0.449);
+      max-width: 300px;
+    }
+    .testimonial-item p {
+      font-style: italic;
+      color: #ffffff;
+    }
+    .testimonial-item span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Logo" style="height: 60px; vertical-align: middle;">
+      <span class="logo">SembakoKita</span>
+      <a href="index.html" class="active">Home</a>
+      <a href="gallery.html">Produk</a>
+      <a href="contact us.html">Pemesanan</a>
+      <a href="about us.html">Tentang Kami</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Cari</button>
+    </div>
+    <div class="waktu">
+      Time: <span id="jam"></span>
+    </div>
+  </header>
+    
+
+    <section class="welcome">
+      <h1>Selamat Datang di SembakoKita</h1>
+      <p>SembakoKita adalah solusi belanja kebutuhan pokok Anda dengan kualitas terbaik, harga terjangkau, dan layanan pengiriman cepat. Kami hadir untuk mempermudah hidup Anda.</p>
+      <div class="cta-buttons">
+        <a href="gallery.html" class="btn">Lihat Produk</a>
+        <a href="contact us.html" class="btn">Pesan Sekarang</a>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Apa Kata Pelanggan Kami?</h2>
+      <div class="testimonial-list">
+        <div class="testimonial-item">
+          <p>"Belanja di SembakoKita sangat mudah dan cepat. Produk selalu segar dan berkualitas!"</p>
+          <span>- Daffa, Tajurhalang</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"Harga yang ditawarkan sangat bersaing. Saya sangat puas dengan layanan pengirimannya."</p>
+          <span>- Saputra, Teluknaga</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"SembakoKita adalah pilihan utama saya untuk belanja kebutuhan sehari-hari. Sangat direkomendasikan!"</p>
+          <span>- Aji, Tangsel</span>
+        </div>
+      </div>
+    </section>
+<section class="features">
+      <h2>Mengapa Memilih SembakoKita?</h2>
+      <p>Kami menyediakan berbagai kebutuhan pokok dengan kualitas terbaik, harga terjangkau, dan pengiriman cepat. Dengan layanan pelanggan yang ramah, kami memastikan pengalaman belanja Anda menjadi lebih mudah dan nyaman.</p>
+      <div class="feature-list">
+        <div>
+          <img src="images/quality.png" alt="Produk Berkualitas">
+          <p><b>Produk Berkualitas</p></b>
+        </div>
+        <div>
+          <img src="images/affordable.png"
+           alt="Harga Terjangkau">
+          <p><b>Harga Terjangkau</p></b>
+        </div>
+        <div>
+          <img src="images/delivery.png" alt="Pengiriman Cepat">
+          <p><b>Pengiriman Cepat</p></b>
+        </div>
+      </div>
+    </section>
+    <div class="pagination">
+      <a href="gallery.html" class="next-page">Halaman Berikutnya</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Azmi Jauhari 251011700167 01SIFP003.</p>
+    </footer>
+<script src="script.js"></script>
+
+</body>
+</html>

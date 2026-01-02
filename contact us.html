@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pemesanan</title>
+    <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      width: 200px;
+    }
+
+    .search-bar button {
+      padding: 5px 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .waktu {
+      margin-top: 10px;
+      margin-right: 20px;
+      text-align: right;
+    }
+
+    form {
+      background: #000; 
+      color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      border: #007bff 2px solid;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    form h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      font-size: 14px;
+      background: #222;
+      color: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .form-actions {
+      text-align: center;
+    }
+
+    .form-actions button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .form-actions button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+.next-page {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .next-page a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .next-page a:hover {
+      background-color: #555;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 20px; /* Memberi jarak lebih */
+      }
+      .pagination a {
+        display: inline-block;
+        padding: 10px 20px; /* Membuat tombol lebih besar */
+        background: linear-gradient(90deg, #4facfe, #00f2fe); /* Warna biru gradasi */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px; /* Membuat sudut lebih melengkung */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+      }
+      .pagination a:hover {
+        background: linear-gradient(90deg, #00f2fe, #4facfe);
+        transform: translateY(-2px); /* Efek hover */
+      }
+    footer {
+      background: #6070ff;
+      color: #000000;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Logo" style="height: 60px; vertical-align: middle;">
+      <span class="logo">SembakoKita</span>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Produk</a>
+      <a href="contact us.html" class="active">Pemesanan</a>
+      <a href="about us.html">Tentang Kami</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Cari</button>
+    </div>
+    <div class="waktu">
+      Time: <span id="jam"></span>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact-container">
+      <h1>Formulir Pemesanan</h1>
+      <p class="intro-text">Silahkan isi formulir di bawah untuk melakukan pemesanan produk kami</p>
+      
+      <form class="order-form" id="orderForm">
+        <!-- Bagian Informasi Pribadi -->
+        <fieldset>
+          <legend>Informasi Pribadi</legend>
+          
+          <div class="form-group">
+            <label for="nama">Nama Lengkap *</label>
+            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telepon">Nomor Telepon *</label>
+              <input type="tel" id="telepon" name="telepon" required placeholder="08xxxxxxxxxx">
+            </div>
+            <div class="form-group">
+              <label for="kota">Kota/Kabupaten *</label>
+              <input type="text" id="kota" name="kota" required placeholder="Masukkan kota Anda">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="alamat">Alamat Lengkap *</label>
+            <textarea id="alamat" name="alamat" rows="3" required placeholder="Jalan, No. Rumah, RT/RW, Kelurahan, Kecamatan"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Pilihan Produk -->
+        <fieldset>
+          <legend>Pilihan Produk</legend>
+          
+          <div class="form-group">
+            <label for="produk">Produk yang Dipesan *</label>
+            <select id="produk" name="produk" required>
+              <option value="">-- Pilih Produk --</option>
+              <option value="beras">Beras</option>
+              <option value="gula">Gula</option>
+              <option value="minyak">Minyak Goreng</option>
+              <option value="telur">Telur Ayam</option>
+              <option value="kecap">Kecap</option>
+              <option value="gas">Gas</option>
+              <option value="aqua">Aqua</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="jumlah">Jumlah Pesanan *</label>
+              <input type="number" id="jumlah" name="jumlah" min="1" value="1" required placeholder="Jumlah">
+            </div>
+            <div class="form-group">
+              <label for="satuan">Satuan *</label>
+              <select id="satuan" name="satuan" required>
+                <option value="">-- Pilih --</option>
+                <option value="galon">Galon</option>
+                <option value="pack">Pack</option>
+                <option value="liter">Liter</option>
+                <option value="kg">Kg</option>
+                <option value="pcs">Pcs</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="catatan">Catatan Tambahan</label>
+            <textarea id="catatan" name="catatan" rows="3" placeholder="Catatan untuk pesanan Anda (opsional)"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Pengiriman -->
+        <fieldset>
+          <legend>Metode Pengiriman</legend>
+          
+          <div class="form-group radio-group">
+            <label class="radio-option">
+              <input type="radio" name="pengiriman" value="ambil" required>
+              <span>Ambil di Lokasi</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="pengiriman" value="antar" required>
+              <span>Diantar ke Alamat</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="tanggal">Tanggal Pengiriman/Pengambilan *</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+          </div>
+        </fieldset>
+
+        <!-- Submit -->
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Pesan Sekarang</button>
+          <button type="reset" class="btn-reset">Bersihkan</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Informasi Kontak -->
+    <div class="info-container">
+      <h2>Hubungi Kami</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>📍 Lokasi</h3>
+          <p>Jl. Raya Puspitek No. 100<br>Tangerang Selatan</p>
+        </div>
+        <div class="info-card">
+          <h3>📞 Telepon</h3>
+          <p>(021) 1234-5678<br>0812-3456-7890</p>
+        </div>
+        <div class="info-card">
+          <h3>✉️ Email</h3>
+          <p>info@sembakokita.com<br>customer@sembakokita.com</p>
+        </div>
+        <div class="info-card">
+          <h3>⏰ Jam Operasional</h3>
+          <p>Senin - Jumat: 05:00 - 20:00<br>Sabtu - Minggu: 06:00 - 18:00</p>
+      </div>
+    </div>
+  </main>
+<div class="pagination">
+      <a href="gallery.html" class="prev-page">Halaman Sebelumnya</a>
+      <a href="about us.html" class="next-page">Halaman Berikutnya</a>
+    </div>
+  <div class="footer">
+  <footer>
+      <p>&copy; 2026 Azmi Jauhari 251011700167 01SIFP003.</p>
+    </footer>
+  </div>
+
+  
+
+  <script>
+    //waktu minimal hari ini untuk input tanggal
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('tanggal').setAttribute('min', today);
+
+    // window alert saat form disubmit
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Terima kasih! Pesanan Anda telah diterima.\nKami akan menghubungi Anda dalam waktu 24 jam.');
+      this.reset();
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

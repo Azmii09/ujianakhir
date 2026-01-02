@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tentang Kami</title>
+    <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      width: 200px;
+    }
+
+    .search-bar button {
+      padding: 5px 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .waktu {
+      margin-top: 10px; 
+      margin-right: 20px;
+      text-align: right; 
+    }
+
+     .about {
+      background-color: #000000;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #6070ff;
+      color: #000000;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    
+    #timeline {
+      background-color: #000000;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+    }
+
+    #timeline h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .timeline-container {
+      position: relative;
+      padding: 20px 0;
+      color: white;
+      background-color: black;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: white;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 80px;
+      text-align: left;
+    }
+
+    .timeline-circle {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: black; 
+      border: 4px solid white;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .timeline-year {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 10px; /* Memberi jarak lebih */
+    }
+    .pagination a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #4facfe, #00f2fe); /* Warna biru gradasi */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px; /* Membuat sudut lebih melengkung */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    }
+    .pagination a:hover {
+      background: linear-gradient(90deg, #00f2fe, #4facfe); /* Efek hover gradasi */
+      transform: translateY(-2px); /* Efek hover */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Logo" style="height: 60px; vertical-align: middle;">
+      <span class="logo">SembakoKita</span>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Produk</a>
+      <a href="contact us.html">Pemesanan</a>
+      <a href="about us.html" class="active">Tentang Kami</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Cari</button>
+    </div>
+    <div class="waktu">
+      Time: <span id="jam"></span>
+    </div>
+  </header>
+
+  <main>
+    <!-- konten halaman -->
+     <section class="about">
+      <h2>Tentang SembakoKita</h2>
+      <p>SembakoKita adalah platform yang menyediakan berbagai kebutuhan pokok dengan kualitas terbaik dan harga terjangkau. Kami berkomitmen untuk memberikan pelayanan terbaik kepada pelanggan dengan menyediakan produk-produk berkualitas seperti beras, gula, minyak goreng, telur, dan banyak lagi. Dengan SembakoKita, belanja kebutuhan sehari-hari menjadi lebih mudah dan nyaman.</p>
+    </section>
+
+    <section id="timeline">
+      <h2>Perjalanan Karir SembakoKita</h2>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-circle"></div>
+          <span class="timeline-year">2006</span>
+          <p>SembakoKita didirikan sebagai toko kelontong kecil yang melayani kebutuhan sehari-hari masyarakat sekitar.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-circle"></div>
+          <span class="timeline-year">2010</span>
+          <p>Mulai memperluas jangkauan dengan menambah variasi produk dan meningkatkan layanan pelanggan.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-circle"></div>
+          <span class="timeline-year">2015</span>
+          <p>Mengadopsi sistem manajemen stok modern untuk meningkatkan efisiensi operasional.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-circle"></div>
+          <span class="timeline-year">2018</span>
+          <p>Meluncurkan program loyalitas pelanggan untuk meningkatkan kepuasan dan retensi pelanggan.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-circle"></div>
+          <span class="timeline-year">2020</span>
+          <p>Memulai transformasi digital dengan meluncurkan platform online untuk pemesanan sembako.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-circle"></div>
+          <span class="timeline-year">2022</span>
+          <p>Mengintegrasikan layanan pengiriman cepat untuk memenuhi kebutuhan pelanggan dengan lebih baik.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-circle"></div>
+          <span class="timeline-year">2025</span>
+          <p>Bertransformasi sepenuhnya menjadi toko kelontong digital yang melayani pelanggan di seluruh negeri dengan berbagai fitur canggih.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="pagination">
+      <a href="contact us.html" class="prev-page">Halaman Sebelumnya</a>
+    </div>
+  </main>
+
+  <footer>
+      <p>&copy; 2026 Azmi Jauhari 251011700167 01SIFP003.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
